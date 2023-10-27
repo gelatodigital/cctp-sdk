@@ -1,0 +1,43 @@
+{
+  "name": "@gelatonetwork/cctp-sdk",
+  "version": "0.1.0",
+  "description": "SDK to integrate Gasless CCTP",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/**/*"
+  ],
+  "scripts": {
+    "build": "rm -rf dist && npx tsc",
+    "format:check": "prettier --check \"*/**/*.{js,json,md,ts}\"",
+    "format": "prettier --write */**/*.{js,json,md,ts}",
+    "lint": "eslint --cache .",
+    "prepare": "husky install"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@tsconfig/recommended": "1.0.3",
+    "@types/node": "20.8.9",
+    "@typescript-eslint/eslint-plugin": "6.9.0",
+    "@typescript-eslint/parser": "6.9.0",
+    "eslint": "8.52.0",
+    "eslint-config-prettier": "8.8.0",
+    "eslint-import-resolver-typescript": "3.6.1",
+    "eslint-plugin-import": "2.29.0",
+    "eslint-plugin-prettier": "4.2.1",
+    "husky": "8.0.3",
+    "lint-staged": "15.0.2",
+    "prettier": "2.8.8",
+    "typescript": "5.2.2"
+  },
+  "dependencies": {
+    "@gelatonetwork/relay-sdk": "5.5.2",
+    "ethers": "6.8.0"
+  },
+  "lint-staged": {
+    "*.{js,json,md,ts}": "yarn format",
+    "*.{ts,js}": "yarn lint"
+  }
+}
